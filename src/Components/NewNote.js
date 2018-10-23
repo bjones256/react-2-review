@@ -4,6 +4,7 @@ export default class NewNote extends Component {
     render() {
         // We are in a class here, so we need to access our props off this.props. I don't feel like typing out this.props.PROP_NAME every time I need to access a value in the render fucntion, so I use object destructuring to pull them off onto variables for less typing later
         let {addNewItem, inputTitle, inputText, updateTitle, updateText} = this.props;
+        // { ^use this.props when using a class.  when using a function you're passing props through the function so you won't ned this}
         return (
             <div>
                 {/* Both Title and text get their value from the parents state. Their handle change functions are passed down from the parent and we invoke them here. just like any other handle change, it takes an events.target.value and uses that to update parent state. */}
